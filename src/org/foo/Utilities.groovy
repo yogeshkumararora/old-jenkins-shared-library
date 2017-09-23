@@ -2,7 +2,6 @@ package org.foo
 class Utilities implements Serializable {
   def steps
   Utilities(steps) {
-    println " ***** steps: "+ steps
     this.steps = steps
   }
   def mvn(args) {
