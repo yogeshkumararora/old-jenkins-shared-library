@@ -5,6 +5,7 @@ class Utilities implements Serializable {
     this.steps = steps
   }
   def checkOutFrom(repo) {
+    deleteDir()
     steps.sh "git clone 'https://github.com/yogeshkumararora/${repo}'"
    //steps.sh "cd experiments"
     
