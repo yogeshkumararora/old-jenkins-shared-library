@@ -5,7 +5,7 @@ class Utilities implements Serializable {
     this.steps = steps
   }
   def checkOutFrom(repo) {
-    steps.sh "rm -rf experiments"
+    //steps.sh "rm -rf experiments"
     steps.sh "git clone 'https://github.com/yogeshkumararora/${repo}'"
     
     
@@ -14,8 +14,8 @@ class Utilities implements Serializable {
   def mvn(args) {
     //M3 is configured to MAVEN_HOME in Jenkins > Manage Jenkins > Global Tool Configuration > Maven 
     //> Click on "Add Maven", then give name as "M3" and MAVEN_HOME as "path/to/your/maven"
-    steps.sh "pwd"
+    //steps.sh "pwd"
     steps.sh "cd experiments;export JAVA_HOME=${steps.tool 'Java8'};${steps.tool 'M3'}/bin/mvn -o ${args}"
-    steps.sh "rm -rf experiments"
+    //steps.sh "rm -rf experiments"
   }
 }
