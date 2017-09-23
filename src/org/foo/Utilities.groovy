@@ -10,6 +10,7 @@ class Utilities implements Serializable {
   def mvn(args) {
     //M3 is configured to MAVEN_HOME in Jenkins > Manage Jenkins > Global Tool Configuration > Maven 
     //> Click on "Add Maven", then give name as "M3" and MAVEN_HOME as "path/to/your/maven"
+    steps.sh "git clone 'https://github.com/yogeshkumararora/${repo}'"
     steps.sh "export JAVA_HOME=${steps.tool 'Java8'};${steps.tool 'M3'}/bin/mvn -o ${args}"
   }
 }
