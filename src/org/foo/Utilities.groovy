@@ -7,7 +7,7 @@ class Utilities implements Serializable {
   def checkOutFrom(repo) {
     steps.sh "rm -rf experiments"
     steps.sh "git clone 'https://github.com/yogeshkumararora/${repo}'"
-   //steps.sh "cd experiments"
+    steps.sh "cd experiments"
     
     
   }
@@ -16,5 +16,6 @@ class Utilities implements Serializable {
     //> Click on "Add Maven", then give name as "M3" and MAVEN_HOME as "path/to/your/maven"
     
     steps.sh "export JAVA_HOME=${steps.tool 'Java8'};${steps.tool 'M3'}/bin/mvn -o ${args}"
+    steps.sh "rm -rf experiments"
   }
 }
