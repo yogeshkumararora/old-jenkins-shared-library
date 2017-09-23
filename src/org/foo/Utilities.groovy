@@ -2,8 +2,8 @@ package org.foo
 class Utilities implements Serializable {
   def steps
   Utilities(steps) {
+    println " ***** steps: "+ steps
     this.steps = steps
-    println "steps: "+ steps
   }
   def mvn(args) {
     //M3 is configured to MAVEN_HOME in Jenkins > Manage Jenkins > Global Tool Configuration > Maven 
