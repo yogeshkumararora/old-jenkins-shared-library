@@ -13,6 +13,6 @@ class Utilities implements Serializable {
     steps.sh "echo 'printed java home'"
     
     //steps.sh "export PATH=${steps.tool 'Java8'}/bin"
-    steps.sh "${steps.tool 'M3'}/bin/mvn -o ${args}"
+    steps.sh "export JAVA_HOME=${steps.tool 'Java8'}:${steps.tool 'M3'}/bin/mvn -o ${args}"
   }
 }
