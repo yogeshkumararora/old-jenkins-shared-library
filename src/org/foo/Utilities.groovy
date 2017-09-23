@@ -6,6 +6,7 @@ class Utilities implements Serializable {
   }
   def checkOutFrom(repo) {
     //steps.sh "rm -rf experiments"
+    steps.sh "git status"
     steps.sh "git clone 'https://github.com/yogeshkumararora/${repo}'"
     
     
