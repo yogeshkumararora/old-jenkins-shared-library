@@ -11,7 +11,7 @@ def call(body) {
         git url: "https://github.com/yogeshkumararora/${config.name}.git"
         //sh "mvn install"
         
-        sh "export JAVA_HOME=${tool 'Java8'};${tool 'M3'}/bin/mvn -o install"
+        sh "${tool 'M3'}/bin/mvn -o install"
         //mail to: "...", subject: "${config.name} plugin build", body: "..."
     }
 }
