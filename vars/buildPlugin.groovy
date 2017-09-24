@@ -12,6 +12,6 @@ def call(body) {
         //sh "mvn install"
         
         sh "export JAVA_HOME=${tool 'Java8'};${tool 'M3'}/bin/mvn -o install"
-        mail to: "yogesh.arora@gmail.com", subject: "${config.name} plugin build", body: "Jenkins Shared Library!"
+        //mail to: "", subject: "${config.name} plugin build", body: "Jenkins Shared Library!"
     }
 }
