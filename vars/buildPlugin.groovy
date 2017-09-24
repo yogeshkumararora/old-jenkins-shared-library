@@ -8,7 +8,7 @@ def call(body) {
     // now build, based on the configuration provided
     node {
         //git url: "https://github.com/jenkinsci/${config.name}-plugin.git"
-        git url: "https://github.com/yogeshkumararora/experiments.git"
+        git url: "https://github.com/yogeshkumararora/${config.name}.git"
         //sh "mvn install"
         
         sh "export JAVA_HOME=${tool 'Java8'};${tool 'M3'}/bin/mvn -o install"
